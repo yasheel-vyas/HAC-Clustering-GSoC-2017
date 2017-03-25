@@ -21,29 +21,7 @@ plot(clust1,hang=-1)
   
 #dev.off()           
 
-#creating the hclust object to implement hierarchial clustering
-
-hc = hclust(dissimilarity, method = 'ward.D')
-
-y_hc = cutree(hc,6)
-
-dissimilarity=as.matrix(dissimilarity) #To convert dissimilarity into a data matrix  
 
 
 
-# Visualising the clusters
-#jpeg('HAC.jpg')
-library(cluster)
-clusplot(dissimilarity,
-         y_hc,
-         lines = 0,
-         shade = FALSE,
-         color = TRUE,
-         labels= 5,
-         plotchar = FALSE,
-         span = TRUE,
-         main = paste('Clusters'),
-        diss=TRUE,
-        
-)
-#dev.off()
+
